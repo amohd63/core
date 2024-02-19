@@ -6,19 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Time;
-
 @Entity
-@Table(name = "videosettings", schema="core_schema")
+@Table(name = "video_setting")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class VideoSettings {
+public class VideoSetting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "s_id", updatable = false, nullable = false, unique = true)
-    private Integer sId;
+    @Column(name = "video_setting_id", updatable = false, nullable = false, unique = true)
+    private Integer video_setting_id;
 
     @Column(name = "setting")
     private String setting;
@@ -26,10 +24,10 @@ public class VideoSettings {
     @Column(name = "value")
     private String value;
 
-    @Column(name = "datatype")
-    private String dataType;
+    @Column(name = "data_type")
+    private String data_type;
 
-    public VideoSettings(Integer sId) {
-        this.sId = sId;
+    public VideoSetting(Integer video_setting_id) {
+        this.video_setting_id = video_setting_id;
     }
 }

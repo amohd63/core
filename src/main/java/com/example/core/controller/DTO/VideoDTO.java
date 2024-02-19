@@ -1,7 +1,6 @@
-package com.example.core.DTO;
+package com.example.core.controller.DTO;
 
-import com.example.core.model.VideoSettings;
-import jakarta.persistence.*;
+import com.example.core.model.VideoSetting;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,6 +18,6 @@ public class VideoDTO {
     private String title;
     private String URL;
     private Time length;
-    private List<VideoSettings> sId;
+    private List<VideoSetting> sId;
 }
 

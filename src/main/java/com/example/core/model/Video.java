@@ -10,7 +10,7 @@ import java.sql.Time;
 import java.util.List;
 
 @Entity
-@Table(name = "video", schema="core_schema")
+@Table(name = "video")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,19 +19,19 @@ public class Video {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "v_id", updatable = false, nullable = false, unique = true)
-    private Integer vId;
+    @Column(name = "video_id", updatable = false, nullable = false, unique = true)
+    private Integer video_id;
 
     @Column(name = "title")
     private String title;
 
     @Column(name = "url")
-    private String URL;
+    private String url;
 
     @Column(name = "length")
     private Time length;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="s_id")
-    private List<VideoSettings> sId;
+    @JoinColumn(name="video_setting_id")
+    private List<VideoSetting> video_setting_id;
 }

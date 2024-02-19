@@ -1,4 +1,4 @@
-package com.example.core.DTO;
+package com.example.core.controller.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
