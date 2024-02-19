@@ -1,11 +1,19 @@
 package com.example.core.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.sql.Time;
 
 @Entity
-@Table(name = "videosettings")
+@Table(name = "videosettings", schema="core_schema")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class VideoSettings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +28,8 @@ public class VideoSettings {
 
     @Column(name = "datatype")
     private String dataType;
+
+    public VideoSettings(Integer sId) {
+        this.sId = sId;
+    }
 }

@@ -1,12 +1,20 @@
 package com.example.core.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.sql.Time;
 import java.util.List;
 
 @Entity
-@Table(name = "video")
+@Table(name = "video", schema="core_schema")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Video {
 
     @Id

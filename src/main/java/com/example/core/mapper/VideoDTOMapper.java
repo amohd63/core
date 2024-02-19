@@ -12,10 +12,14 @@ import org.springframework.web.bind.annotation.Mapping;
 public class VideoDTOMapper {
 
     public VideoDTO videoToVideoDTO(Video video){
-        return new VideoDTO();
+        return new VideoDTO(
+                video.getVId(), video.getTitle(), video.getURL(), video.getLength(), video.getSId()
+        );
     }
 
     public Video videoDTOToVideo(VideoDTO videoDTO){
-        return new Video();
+        return new Video(
+                videoDTO.getVId(), videoDTO.getTitle(), videoDTO.getURL(), videoDTO.getLength(), videoDTO.getSId()
+        );
     }
 }

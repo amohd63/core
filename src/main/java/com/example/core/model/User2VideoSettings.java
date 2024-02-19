@@ -2,7 +2,7 @@ package com.example.core.model;
 
 import jakarta.persistence.*;
 
-@Table(name = "User2VideoSettings")
+@Table(name = "User2VideoSettings", schema="core_schema")
 public class User2VideoSettings {
 
     @OneToMany(mappedBy = "u_id", cascade = CascadeType.ALL, orphanRemoval = true)
