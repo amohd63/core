@@ -18,5 +18,6 @@ public class VideoDTO {
     private String title;
     private String url;
     private Time length;
+    private List<VideoSettingDTO> video_settings;
 }
 

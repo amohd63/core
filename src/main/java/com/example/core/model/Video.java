@@ -16,11 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Video {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "video_id", updatable = false, nullable = false, unique = true)
-    private Integer video_id;
+    private Integer id;
 
     @Column(name = "title")
     private String title;
@@ -31,7 +30,7 @@ public class Video {
     @Column(name = "length")
     private Time length;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="video_setting_id")
     private List<VideoSetting> video_settings;
 }
