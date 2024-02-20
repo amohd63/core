@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+lib/j2ee.jar
