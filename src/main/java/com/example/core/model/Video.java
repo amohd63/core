@@ -20,7 +20,7 @@ public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "video_id", updatable = false, nullable = false, unique = true)
-    private Integer id;
+    private Integer video_id;
 
     @Column(name = "title")
     private String title;
@@ -31,7 +31,7 @@ public class Video {
     @Column(name = "length")
     private Time length;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="video_setting_id")
     private List<VideoSetting> video_settings;
 }

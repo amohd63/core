@@ -11,7 +11,6 @@ import java.util.List;
 public class VideoSettingDTO {
     private Integer id;
     private String setting;
-//    private List<String> values;
     private String default_value;
     private String data_type;
 }
