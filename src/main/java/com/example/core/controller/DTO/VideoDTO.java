@@ -14,9 +14,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VideoDTO {
-    private Integer vId;
+    private Integer id;
     private String title;
-    private String URL;
+    private String url;
     private Time length;
 }
 
