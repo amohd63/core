@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "video_setting")
 @Getter
@@ -16,18 +18,17 @@ public class VideoSetting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "video_setting_id", updatable = false, nullable = false, unique = true)
-    private Integer video_setting_id;
+    private Integer id;
 
     @Column(name = "setting")
     private String setting;
 
-    @Column(name = "value")
-    private String value;
+    @Column(name = "values_list", columnDefinition = "text[]")
+    private List<String> values_list;
+
+    @Column(name = "default_value")
+    private String default_value;
 
     @Column(name = "data_type")
     private String data_type;
-
-    public VideoSetting(Integer video_setting_id) {
-        this.video_setting_id = video_setting_id;
-    }
 }

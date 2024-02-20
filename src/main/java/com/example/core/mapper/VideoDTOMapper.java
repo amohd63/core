@@ -4,22 +4,20 @@ import com.example.core.controller.DTO.VideoDTO;
 import com.example.core.model.Video;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-import org.springframework.stereotype.Component;
 
 @Mapper(componentModel = "spring")
 public interface VideoDTOMapper {
-//    @Mapping(target = "vId", source = "entity.video_id")
-//    @Mapping(target = "title", source = "entity.title")
-//    @Mapping(target = "URL", source = "entity.url")
-//    @Mapping(target = "length", source = "entity.length")
-//    @Mapping(target = "sId", source = "entity.video_setting_id")
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "title", source = "title")
+    @Mapping(target = "url", source = "url")
+    @Mapping(target = "length", source = "length")
+    @Mapping(target = "video_settings", source = "video_settings")
     VideoDTO videoToVideoDTO(Video video);
 
-//    @Mapping(source = "dto.vId", target = "video_id")
-//    @Mapping(source = "dto.title", target = "title")
-//    @Mapping(source = "dto.URL", target = "url")
-//    @Mapping(source = "dto.length", target = "length")
-//    @Mapping(source = "dto.sId", target = "video_setting_id")
+    @Mapping(source = "id", target = "id")
+    @Mapping(source = "title", target = "title")
+    @Mapping(source = "url", target = "url")
+    @Mapping(source = "length", target = "length")
+    @Mapping(source = "video_settings", target = "video_settings")
     Video videoDTOToVideo(VideoDTO videoDTO);
 }
