@@ -4,6 +4,7 @@ import com.example.core.controller.DTO.VideoDTO;
 import com.example.core.mapper.VideoDTOMapper;
 import com.example.core.service.VideoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +19,10 @@ import java.util.stream.Collectors;
 
 
 public class VideoController {
-    private final VideoService videoService;
-    private final VideoDTOMapper videoDTOMapper;
+    @Autowired
+    private VideoService videoService;
+    @Autowired
+    private VideoDTOMapper videoDTOMapper;
 
     @GetMapping("/all")
     public List<VideoDTO> getAllVideos(){
