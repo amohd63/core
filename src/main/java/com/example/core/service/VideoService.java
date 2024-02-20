@@ -19,4 +19,8 @@ public class VideoService {
     public List<Video> getAll(){
         return videoRepository.findAll();
     }
+
+    public Video getVideoByTitle(String title){
+        return videoRepository.findVideoByTitle(title);
+    }
 }

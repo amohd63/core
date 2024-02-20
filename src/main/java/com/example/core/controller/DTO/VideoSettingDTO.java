@@ -1,15 +1,15 @@
 package com.example.core.controller.DTO;
 
-public class VideoSettingsDTO {
+public class VideoSettingDTO {
     private Integer sId;
     private String setting;
     private String value;
     private String dataType;
 
-    public VideoSettingsDTO() {
+    public VideoSettingDTO() {
     }
 
-    public VideoSettingsDTO(Integer sId, String setting, String value, String dataType) {
+    public VideoSettingDTO(Integer sId, String setting, String value, String dataType) {
         this.sId = sId;
         this.setting = setting;
         this.value = value;

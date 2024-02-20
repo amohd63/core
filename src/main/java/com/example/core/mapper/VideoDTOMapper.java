@@ -12,13 +12,13 @@ public class VideoDTOMapper {
 
     public VideoDTO videoToVideoDTO(Video video){
         return new VideoDTO(
-                video.getVideo_id(), video.getTitle(), video.getUrl(), video.getLength(), video.getVideo_settings()
+                video.getVideo_id(), video.getTitle(), video.getUrl(), video.getLength()
         );
     }
 
     public Video videoDTOToVideo(VideoDTO videoDTO){
         return new Video(
-                videoDTO.getVId(), videoDTO.getTitle(), videoDTO.getURL(), videoDTO.getLength(), videoDTO.getSId()
+                videoDTO.getVId(), videoDTO.getTitle(), videoDTO.getURL(), videoDTO.getLength(), null
         );
     }
 }
