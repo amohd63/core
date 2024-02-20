@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
-@ComponentScan({"com.example.core.mapper"})
+//@ComponentScan({"com.example.core.mapper"})
 
 public class CoreApplication {
 
