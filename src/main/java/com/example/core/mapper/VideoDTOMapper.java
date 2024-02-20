@@ -12,7 +12,7 @@ public class VideoDTOMapper {
 
     public VideoDTO videoToVideoDTO(Video video){
         return new VideoDTO(
-                video.getVideo_id(), video.getTitle(), video.getUrl(), video.getLength(), video.getVideo_setting_id()
+                video.getVideo_id(), video.getTitle(), video.getUrl(), video.getLength(), video.getVideo_settings()
         );
     }
 

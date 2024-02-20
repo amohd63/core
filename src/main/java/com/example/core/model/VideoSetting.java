@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "video_setting")
 @Getter
@@ -26,8 +28,4 @@ public class VideoSetting {
 
     @Column(name = "data_type")
     private String data_type;
-
-    public VideoSetting(Integer video_setting_id) {
-        this.video_setting_id = video_setting_id;
-    }
 }

@@ -31,7 +31,7 @@ public class Video {
     @Column(name = "length")
     private Time length;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="video_setting_id")
-    private List<VideoSetting> video_setting_id;
+    private List<VideoSetting> video_settings;
 }
