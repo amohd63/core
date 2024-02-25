@@ -2,17 +2,16 @@ package com.example.core.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.ToString;
 
 import java.sql.Time;
 import java.util.List;
 
 @Entity
 @Table(name = "video")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Video {
@@ -30,7 +29,9 @@ public class Video {
     @Column(name = "length")
     private Time length;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="video_setting_id")
-    private List<VideoSetting> video_settings;
+    @ToString.Exclude
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "video_2_video_setting", joinColumns = @JoinColumn(name = "video_id"),
+            inverseJoinColumns = @JoinColumn(name = "video_setting_id"))
+    private List<VideoSetting> videoSettings;
 }

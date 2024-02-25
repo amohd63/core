@@ -7,15 +7,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.List;
-
 @RequiredArgsConstructor
 @Getter
 @Setter
 @ToString
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class VideoSettingDTO {
-    private String setting;
-    private List<String> valuesList;
-    private String defaultValue; // @JsonNaming -
+public class CreateVideoSettingRequest {
+    private Integer id;
+    private String defaultValue;
 }
